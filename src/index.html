@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
-  <title></title>
+  <title>Weather</title>
 </head>
 <body>
-  <h3></h3>
-  <form id="template-form">
-    <label for="template-input"></label>
-    <input id="template-input" type="text">
-    <button type="submit"></button>
-  </form>
-  <ul id="template-response"></ul>
+  <div class="container">
+    <h1>Get Weather Conditions From Anywhere!</h1>
+    <label for="location">Enter a location:</label>
+    <input id="location" type="text">
+    <button class="btn-success" id="weatherLocation">Get Current Temperature and Humidity</button>
+    <div class="showErrors"></div>
+    <div class="showHumidity"></div>
+    <div class="showTemp"></div>
+  </div>
 </body>
 </html>
