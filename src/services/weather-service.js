@@ -1,6 +1,6 @@
 export default class WeatherService {
   static getWeather(city) {
-    return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`)
+    return fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.OPEN_WEATHER_API_KEY}`)
       .then(function (response) {
         if (!response.ok) {
           throw Error(response.statusText);
@@ -8,7 +8,7 @@ export default class WeatherService {
         return response.json();
       })
       .catch(function (error) {
-        return error;
-      })
+        return Error(error);
+      });
   }
 }
